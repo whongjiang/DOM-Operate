@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-family: "Helvetica", "Arial", serif;
+      color: #333;
+      background-color: #ccc;
+      margin: 100px;
+    }
+    li{
+      list-style: none;
+    }
+    li img{
+      width: 150px;
+    }
+    #bigimg{
+      width: 400px;
+      height: 250px;
+    }
+  </style>
+</head>
+<body>
+<h2>美女画廊</h2>
+<li>
+  <a href="javascript:;"><img src="images/1.jpg" alt="赵丽颖1"/></a>
+  <a href="javascript:;"><img src="images/2.jpg" alt="赵丽颖2"/></a>
+  <a href="javascript:;"><img src="images/3.jpg" alt="赵丽颖3"/></a>
+  <a href="javascript:;"><img src="images/4.jpg" alt="赵丽颖4"/></a>
+</li>
+<img src="images/placeholder.png" alt="" id="bigimg"/>
+<p style="font-weight: 700">赵丽颖0</p>
+</body>
+<script>
+  var aImg= document.getElementsByTagName("img");
+  /*aImg[0].onclick=function(){
+    document.getElementById("bigimg").src=this.src;
+    document.getElementsByTagName("p")[0].innerHTML="赵丽颖"+(0+1)+"";
+  }*/
+
+
+  for(var i=0;i<aImg.length;i++){
+    aImg[i].onclick=function(){
+      document.getElementById("bigimg").src=this.src;
+      document.getElementsByTagName("p")[0].innerHTML=this.alt;
+    }
+  }
+
+ /* for(var i=0;i<aImg.length;i++){                      //这种方法为什么行不通啊？？？？？？？？？？？？
+    aImg[i].onclick=function(){                  //理论上没有错哈！！！！
+      document.getElementById("bigimg").src="images/"+(i+1)+".jpg";
+      document.getElementsByTagName("p")[0].innerHTML="赵丽颖"+(i+1)+"";
+    }
+  }*/
+
+
+
+
+
+
+
+
+
+</script>
+</html>
